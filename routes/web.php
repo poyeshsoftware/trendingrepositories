@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return Redirect::to('/api/repositories/search');
+    return Redirect::to('/api/repositories/search?language=javascript');
 });
