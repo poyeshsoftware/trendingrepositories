@@ -9,12 +9,15 @@ The service should be able to provide:
 - A filter for the programming language would be a great addition to have.
 
 I have created a REST API to parse data from GitHub REST API.
+
+## API Video Introduction 
+ [https://payam.pro/githubRepositories.mp4](https://payam.pro/githubRepositories.mp4) 
  
 ## How to Setup project
 
 - run command : `composer install`
-- change `.env.example` File to `.env` and setup .env database information
-- set GITHUB_URL=https://api.github.com in the .env file
+- change `.env.example` File to `.env` you don't need to setup database because we don't use database in this project.
+- ( Optional ) set GITHUB_URL=https://api.github.com in the .env file 
 - run command : `php artisan key:generate`
 - run command : `php artisan serve`
 
