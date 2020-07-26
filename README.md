@@ -12,7 +12,11 @@ I have created a REST API to parse data from GitHub REST API.
 
 ## API Video Introduction 
  [https://payam.pro/githubRepositories.mp4](https://payam.pro/githubRepositories.mp4) 
- 
+
+## API Live heroku App URL
+- [https://apothekeshop.herokuapp.com](https://apothekeshop.herokuapp.com)
+- [https://apothekeshop.herokuapp.com/api/repositories/search](https://apothekeshop.herokuapp.com/api/repositories/search)
+- [https://apothekeshop.herokuapp.com/api/repositories/search?per_page=50&language=php](https://apothekeshop.herokuapp.com/api/repositories/search?per_page=50&language=php)
 ## How to Setup project
 
 - run command : `composer install`
