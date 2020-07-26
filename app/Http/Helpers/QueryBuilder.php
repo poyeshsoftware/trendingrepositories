@@ -4,15 +4,17 @@
 namespace App\Http\Helpers;
 
 
+use App\Enums\SortOptions;
+
 class QueryBuilder
 {
 
     static function buildQuery($request)
     {
-        $query = '/search/repositories?q=';
+        $query_base = '/search/repositories?q=';
 
+        $query = "";
         $add = false;
-
         if (array_key_exists('created', $request)) {
             $query .= 'created:>' . $request['created'];
             $add = true;
@@ -27,12 +29,15 @@ class QueryBuilder
             unset($request['language']);
         }
 
+        if (!array_key_exists('sort', $request)) {
+            $request['sort'] = SortOptions::STARS();
+        }
+
         foreach ($request as $key => $value) {
             $query .= '&' . $key . '=' . $value;
         }
 
-        return $query;
+        return $query_base.$query;
     }
-
 
 }

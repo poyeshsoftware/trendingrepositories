@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\OrderOptions;
+use App\Enums\SortOptions;
 use Illuminate\Foundation\Http\FormRequest;
 
 class TrendingRequest extends FormRequest
@@ -27,7 +29,8 @@ class TrendingRequest extends FormRequest
             'created' => 'required_without:language|date_format:Y-m-d',
             'language' => 'required_without:created|string',
             'per_page' => 'numeric',
-            'sort' => 'in:ASC,asc,desc,DESC'
+            'order' => 'enum_value:' . OrderOptions::class,
+            'sort' => 'enum_value:' . SortOptions::class
         ];
     }
 }
