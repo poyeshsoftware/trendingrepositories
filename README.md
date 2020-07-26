@@ -21,8 +21,7 @@ GitHub REST API documentation: [https://developer.github.com/v3/ ](https://devel
 
 ## API Live heroku App URL
 - [https://apothekeshop.herokuapp.com](https://apothekeshop.herokuapp.com)
-- [https://apothekeshop.herokuapp.com/api/repositories/search](https://apothekeshop.herokuapp.com/api/repositories/search)
-- [https://apothekeshop.herokuapp.com/api/repositories/search?per_page=50&language=php](https://apothekeshop.herokuapp.com/api/repositories/search?per_page=50&language=php)
+- [https://apothekeshop.herokuapp.com/api/repositories/search?query=trending](https://apothekeshop.herokuapp.com/api/repositories/search?query=trending)
 ## How to Setup project
 
 - run command : `composer install`
