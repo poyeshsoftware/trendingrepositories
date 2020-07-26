@@ -9,7 +9,6 @@ use Tests\TestCase;
 class TrendingRequestTest extends TestCase
 {
 
-
     private $rules;
 
     /** @var Validator */
@@ -60,26 +59,12 @@ class TrendingRequestTest extends TestCase
         $this->assertTrue($result);
     }
 
-
     /**
      * @test
      */
-    public function form_should_not_validate_without_created_or_language()
+    public function form_should_validate_with_order_by_desc()
     {
         $result = $this->validator->make([
-
-        ], $this->rules)->passes();
-
-        $this->assertFalse($result);
-    }
-
-    /**
-     * @test
-     */
-    public function form_should_validate_with_language_and_order_desc()
-    {
-        $result = $this->validator->make([
-            'language' => 'php',
             'order' => 'desc',
         ], $this->rules)->passes();
 
@@ -89,10 +74,9 @@ class TrendingRequestTest extends TestCase
     /**
      * @test
      */
-    public function form_should_validate_with_language_and_order_asc()
+    public function form_should_validate_with_order_by_asc()
     {
         $result = $this->validator->make([
-            'language' => 'php',
             'order' => 'asc',
         ], $this->rules)->passes();
 
@@ -102,10 +86,9 @@ class TrendingRequestTest extends TestCase
     /**
      * @test
      */
-    public function form_should_not_validate_with_language_and_wrong_order()
+    public function form_should_not_validate_with_wrong_order()
     {
         $result = $this->validator->make([
-            'language' => 'php',
             'order' => 'hi',
         ], $this->rules)->passes();
 
@@ -115,10 +98,9 @@ class TrendingRequestTest extends TestCase
     /**
      * @test
      */
-    public function form_should_validate_with_language_and_per_page()
+    public function form_should_validate_with_per_page()
     {
         $result = $this->validator->make([
-            'language' => 'php',
             'per_page' => '50',
         ], $this->rules)->passes();
 
@@ -128,10 +110,9 @@ class TrendingRequestTest extends TestCase
     /**
      * @test
      */
-    public function form_should_validate_with_language_and_wrong_per_page()
+    public function form_should_validate_with_wrong_per_page()
     {
         $result = $this->validator->make([
-            'language' => 'php',
             'per_page' => 'hi',
         ], $this->rules)->passes();
 
@@ -141,10 +122,9 @@ class TrendingRequestTest extends TestCase
     /**
      * @test
      */
-    public function form_should_validate_with_language_and_sort_by_stars()
+    public function form_should_validate_with_sort_by_stars()
     {
         $result = $this->validator->make([
-            'language' => 'php',
             'sort' => 'stars',
         ], $this->rules)->passes();
 
@@ -154,10 +134,9 @@ class TrendingRequestTest extends TestCase
     /**
      * @test
      */
-    public function form_should_validate_with_language_and_sort_by_forks()
+    public function form_should_validate_with_sort_by_forks()
     {
         $result = $this->validator->make([
-            'language' => 'php',
             'sort' => 'forks',
         ], $this->rules)->passes();
 
@@ -167,10 +146,9 @@ class TrendingRequestTest extends TestCase
     /**
      * @test
      */
-    public function form_should_not_validate_with_language_and_wrong_sort()
+    public function form_should_not_validate_with_wrong_sort()
     {
         $result = $this->validator->make([
-            'language' => 'php',
             'sort' => 'haha',
         ], $this->rules)->passes();
 

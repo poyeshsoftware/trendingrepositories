@@ -20,14 +20,14 @@ class TrendingRequest extends FormRequest
 
     /**
      * Get the validation rules that apply to the request.
-     *
+     * //required_without:created//
      * @return array
      */
     public function rules()
     {
         return [
-            'created' => 'required_without:language|date_format:Y-m-d',
-            'language' => 'required_without:created|string',
+            'created' => 'date_format:Y-m-d',
+            'language' => 'string',
             'per_page' => 'numeric',
             'order' => 'enum_value:' . OrderOptions::class,
             'sort' => 'enum_value:' . SortOptions::class

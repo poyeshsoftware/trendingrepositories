@@ -36,11 +36,9 @@ class TrendingControllerTest extends TestCase
      */
     public function fake_search_method_should_be_called()
     {
-
         $this->mock->shouldReceive('search')->once();
 
         $this->call('GET', 'api/repositories/search?created=2012-12-30');
-
     }
 
 }

@@ -14,17 +14,17 @@ class QueryBuilder
         $query_base = '/search/repositories?q=';
 
         $query = "";
-        $add = false;
+
         if (array_key_exists('created', $request)) {
             $query .= 'created:>' . $request['created'];
-            $add = true;
             unset($request['created']);
+        } else {
+            $query .= 'created:>2008-01-01';
         }
 
+
         if (array_key_exists('language', $request)) {
-            if ($add) {
-                $query .= "+";
-            }
+            $query .= "+";
             $query .= 'language:' . $request['language'];
             unset($request['language']);
         }
@@ -37,7 +37,7 @@ class QueryBuilder
             $query .= '&' . $key . '=' . $value;
         }
 
-        return $query_base.$query;
+        return $query_base . $query;
     }
 
 }
