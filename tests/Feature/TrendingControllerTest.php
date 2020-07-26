@@ -38,7 +38,7 @@ class TrendingControllerTest extends TestCase
     {
         $this->mock->shouldReceive('search')->once();
 
-        $this->call('GET', 'api/repositories/search?created=2012-12-30');
+        $this->call('GET', 'api/repositories/search?query=trending');
     }
 
 }

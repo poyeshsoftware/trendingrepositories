@@ -15,18 +15,25 @@ class QueryBuilder
 
         $query = "";
 
-        if (array_key_exists('created', $request)) {
-            $query .= 'created:>' . $request['created'];
-            unset($request['created']);
-        } else {
-            $query .= 'created:>2008-01-01';
+        $add = false;
+        if (array_key_exists('query', $request)) {
+            $query .= $request['query'];
+            unset($request['query']);
+            $add = true;
         }
 
-
         if (array_key_exists('language', $request)) {
-            $query .= "+";
+            if ($add) {
+                $query .= "+";
+            }
             $query .= 'language:' . $request['language'];
             unset($request['language']);
+        }
+
+        if (array_key_exists('created', $request)) {
+            $query .= "+";
+            $query .= 'created:>' . $request['created'];
+            unset($request['created']);
         }
 
         if (!array_key_exists('sort', $request)) {

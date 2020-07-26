@@ -11,12 +11,10 @@ The service should be able to provide:
 I have created a REST API to parse data from GitHub REST API.
 
 ## notice
-try to choose language input in the api because it seems if we don't choose any query input like setting language github does not answer correctly , I mean it works the results is not correct
-for example: 
+Having a query input or setting language is mandatory and you have to set atleast one them.
 
-[to see github api from start date and sort by stars click here](https://api.github.com/search/repositories?q=created:>2008-01-01&sort=star)
-
-as you can see it does not answer correctly if you don't define the language or a query string
+because github repository search api requires to set query as you can see from api documentations
+GitHub REST API documentation: [https://developer.github.com/v3/ ](https://developer.github.com/v3/) 
 
 ## API Video Introduction 
  [https://payam.pro/githubRepositories.mp4](https://payam.pro/githubRepositories.mp4) 

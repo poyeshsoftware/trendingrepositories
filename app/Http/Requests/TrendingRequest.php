@@ -26,8 +26,9 @@ class TrendingRequest extends FormRequest
     public function rules()
     {
         return [
+            'query' => 'required_without:language|string|max:255',
+            'language' => 'required_without:query|string',
             'created' => 'date_format:Y-m-d',
-            'language' => 'string',
             'per_page' => 'numeric',
             'order' => 'enum_value:' . OrderOptions::class,
             'sort' => 'enum_value:' . SortOptions::class

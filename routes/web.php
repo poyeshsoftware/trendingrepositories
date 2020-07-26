@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return Redirect::to('/api/repositories/search?language=javascript');
+    return Redirect::to('/api/repositories/search?query=trending&language=javascript');
 });
