@@ -16,7 +16,6 @@ class TrendingRepositoriesService implements TrendingRepositoriesInterface
 
     public function search($request)
     {
-
         try {
             $url = GithubURL::get() . QueryBuilder::buildQuery($request);
             $client = new Client();
@@ -28,9 +27,8 @@ class TrendingRepositoriesService implements TrendingRepositoriesInterface
                 'error' => true,
                 'message' => 'please try again later'
             ];
-            return response($error, 400);
+            return response($error, 500);
         }
     }
-
 
 }

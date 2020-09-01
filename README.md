@@ -1,5 +1,5 @@
 
-## Shop-Apotheke Back-end Coding Challenge 
+## Back-end API that connects to github api to get most famous Github repositories and give you the result
 I have used Laravel as back-end php framework.
 
 The service should be able to provide:
