@@ -17,7 +17,7 @@ because github repository search api requires to set query as you can see from a
 GitHub REST API documentation: [https://developer.github.com/v3/ ](https://developer.github.com/v3/) 
 
 ## API Video Introduction 
- [https://payam.pro/githubRepositories.mp4](https://payamblog.com/githubRepositories.mp4) 
+ [https://payamblog.com/githubRepositories.mp4](https://payamblog.com/githubRepositories.mp4) 
 
 ## API Live heroku App URL
 - [https://apothekeshop.herokuapp.com](https://apothekeshop.herokuapp.com)
