@@ -17,7 +17,7 @@ because github repository search api requires to set query as you can see from a
 GitHub REST API documentation: [https://developer.github.com/v3/ ](https://developer.github.com/v3/) 
 
 ## API Video Introduction 
- [https://payam.pro/githubRepositories.mp4](https://payam.pro/githubRepositories.mp4) 
+ [https://payam.pro/githubRepositories.mp4](https://payamblog.com/githubRepositories.mp4) 
 
 ## API Live heroku App URL
 - [https://apothekeshop.herokuapp.com](https://apothekeshop.herokuapp.com)
@@ -46,4 +46,4 @@ in free version of REST_API you can send 30 requests per minutes to the GitHub A
 GitHub REST API documenation: [https://developer.github.com/v3/ ](https://developer.github.com/v3/) 
 
 ## Made By :
-Payam Ghader Kourehpaz [https://payam.pro](https://payam.pro)
+Payam Ghader Kourehpaz [https://payamblog.com](https://payamblog.com)
